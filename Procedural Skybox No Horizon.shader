@@ -99,7 +99,7 @@
 
 				float3 eyeRay = normalize(mul((float3x3)unity_ObjectToWorld, v.vertex.xyz));
 
-            	OUT.vertex = -v.vertex;
+				OUT.vertex = -v.vertex;
 				OUT.skyColor = _Exposure * (_SkyTint * getRayleighPhase(_WorldSpaceLightPos0.xyz, -eyeRay));
        
 				half lightColorIntensity = clamp(length(_LightColor0.xyz), 0.25, 1);
